@@ -1,0 +1,46 @@
+#root {
+  max-width: 1760px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+body {
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mask-custom {
+  background: rgba(24, 24, 16, .2);
+  border-radius: 2em;
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
+
+.table>:not(caption)>*>* {
+  background-color: transparent;
+  color: #fff;
+}
+
+.address-container {
+  position: absolute;
+  color: white;
+  padding: 8px;
+  margin-left: 50px;
+  margin-top: -28px;
+  border-radius: 5px;
+  z-index: 10;
+  white-space: nowrap;
+  opacity: 1;
+}
