@@ -1,54 +1,26 @@
-# React + TypeScript + Vite
+# UsersList project on Typescript + React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project aims to create a simple web application on React, that takes teh data from https://jsonplaceholder.typicode.com/users/ and makes it into a user friendly and understandable table of information.
 
-Currently, two official plugins are available:
+## Project progression
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+First step in completing the set goal was downloading vite, create the working directory and the React project template using vite.
 
-## Expanding the ESLint configuration
+After successful creation and start of a local server, the needed dependencies were installed like Bootstrap and Axios, after which the fuctionality and styling of the page were created.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+When the set goals were achieved, tests were created with vitest and the application was dockerized.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Running the app with Docker
+
+To run the application in a docker, only 2 commands are needed:
+
+```shell
+docker build -t my-vite-app .
+```
+```shell
+docker run -p 3000:5173 my-vite-app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+"Docker build", creates the image that is going to be run inside the Docker and "Docker run" starts the application and maps vites default port to port 3000 on the local host.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Total project time took around 6 hours from start to finish. This is personally my first React project as i am not usually into web programming all that much. A template was used for styling the table: https://mdbootstrap.com/snippets/standard/mdbootstrap/2920550?view=side.
