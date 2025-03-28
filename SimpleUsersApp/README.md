@@ -21,6 +21,6 @@ docker build -t my-vite-app .
 docker run -p 3000:5173 my-vite-app
 ```
 
-"Docker build", creates the image that is going to be run inside the Docker and "Docker run" starts the application and maps vites default port to port 3000 on the local host.
+"Docker build", creates the image that is going to be run inside the Docker (my-vite-app can be anyhting, it is just a name) and "Docker run" starts the application and maps vites default port to port 3000 on the local host.
 
 Total project time took around 6 hours from start to finish. This is personally my first React project as i am not usually into web programming all that much. A template was used for styling the table: https://mdbootstrap.com/snippets/standard/mdbootstrap/2920550?view=side.
